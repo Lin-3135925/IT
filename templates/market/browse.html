@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Browse listings{% endblock %}
+
+{% block content %}
+<h2 class="mb-3">Browse listings</h2>
+
+<form id="filter-form" class="row g-2 align-items-end mb-3" method="get">
+  <div class="col-12 col-md-4">
+    <label class="form-label" for="category">Category</label>
+    <select class="form-select" id="category" name="category">
+      <option value="">All</option>
+      {% for c in categories %}
+        <option value="{{ c.id }}">{{ c.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="col-12 col-md-5">
+    <label class="form-label" for="q">Search keyword</label>
+    <input class="form-control" id="q" name="q" value="{{ q|default:'' }}">
+  </div>
+
+  <div class="col-12 col-md-3 d-flex gap-2">
+    <button class="btn btn-primary w-100" type="submit">Filter</button>
+    <a class="btn btn-outline-secondary w-100" href="{% url 'browse' %}">Clear</a>
+  </div>
+</form>
+
+<div id="listing-container">
+  {% include "market/listing_cards.html" %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/browse_filter.js' %}"></script>
+{% endblock %}
