@@ -1,0 +1,21 @@
+{% if listings %}
+  <div class="row g-3">
+    {% for item in listings %}
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-1">{{ item.title }}</h5>
+            <div class="text-muted small mb-2">
+              £{{ item.price }} · {{ item.category.name }} · {{ item.status }}
+            </div>
+            <a class="btn btn-sm btn-outline-primary" href="#">View details</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="alert alert-light border">
+    No listings yet.
+  </div>
+{% endif %}
