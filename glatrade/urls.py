@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('market.urls')),
+    # hook up the accounts app routes
+    path('accounts/', include('accounts.urls')), 
 ]
