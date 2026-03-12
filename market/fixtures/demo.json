@@ -1,0 +1,304 @@
+[
+{
+  "model": "market.category",
+  "pk": 1,
+  "fields": {
+    "name": "Books"
+  }
+},
+{
+  "model": "market.category",
+  "pk": 2,
+  "fields": {
+    "name": "Electronics"
+  }
+},
+{
+  "model": "market.category",
+  "pk": 3,
+  "fields": {
+    "name": "Furniture"
+  }
+},
+{
+  "model": "market.category",
+  "pk": 4,
+  "fields": {
+    "name": "Kitchen"
+  }
+},
+{
+  "model": "market.category",
+  "pk": 5,
+  "fields": {
+    "name": "Sports"
+  }
+},
+{
+  "model": "market.category",
+  "pk": 6,
+  "fields": {
+    "name": "Misc"
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 1,
+  "fields": {
+    "title": "DSA Textbook (Good Condition)",
+    "description": "Used for one semester, minor highlights",
+    "price": "18.00",
+    "status": "AVAILABLE",
+    "category": 1,
+    "created_at": "2026-03-12T13:53:34.693Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 2,
+  "fields": {
+    "title": "Database Systems Notes + Practice Pack",
+    "description": "Printed notes, includes exercises",
+    "price": "6.00",
+    "status": "AVAILABLE",
+    "category": 1,
+    "created_at": "2026-03-12T13:54:06.273Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 3,
+  "fields": {
+    "title": "Calculus Workbook",
+    "description": "Some writing on first few pages.",
+    "price": "5.00",
+    "status": "AVAILABLE",
+    "category": 1,
+    "created_at": "2026-03-12T13:55:02.961Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 4,
+  "fields": {
+    "title": "Used Bike (City Commuter)",
+    "description": "Works well, needs basic cleaning.",
+    "price": "85.00",
+    "status": "AVAILABLE",
+    "category": 5,
+    "created_at": "2026-03-12T13:55:34.475Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 5,
+  "fields": {
+    "title": "Bike Lock (U-lock)",
+    "description": "Solid lock, two keys included.",
+    "price": "12.00",
+    "status": "AVAILABLE",
+    "category": 5,
+    "created_at": "2026-03-12T13:56:04.410Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 6,
+  "fields": {
+    "title": "Yoga Mat",
+    "description": "Non-slip, easy to roll.",
+    "price": "8.00",
+    "status": "AVAILABLE",
+    "category": 5,
+    "created_at": "2026-03-12T13:56:30.583Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 7,
+  "fields": {
+    "title": "24-inch Monitor (HDMI)",
+    "description": "Great for study, cable included.",
+    "price": "55.00",
+    "status": "AVAILABLE",
+    "category": 2,
+    "created_at": "2026-03-12T13:57:01.598Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 8,
+  "fields": {
+    "title": "Wireless Mouse",
+    "description": "Battery included, smooth clicks.",
+    "price": "7.00",
+    "status": "AVAILABLE",
+    "category": 2,
+    "created_at": "2026-03-12T13:58:26.471Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 9,
+  "fields": {
+    "title": "Mechanical Keyboard (Blue Switch)",
+    "description": "Loud but satisfying, fully working.",
+    "price": "20.00",
+    "status": "AVAILABLE",
+    "category": 2,
+    "created_at": "2026-03-12T13:58:54.311Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 10,
+  "fields": {
+    "title": "iPad Stand (Adjustable)",
+    "description": "Good for reading and Zoom calls.",
+    "price": "6.00",
+    "status": "AVAILABLE",
+    "category": 2,
+    "created_at": "2026-03-12T14:00:21.740Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 11,
+  "fields": {
+    "title": "Desk Lamp (LED)",
+    "description": "3 brightness levels.",
+    "price": "9.00",
+    "status": "AVAILABLE",
+    "category": 4,
+    "created_at": "2026-03-12T14:00:58.344Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 12,
+  "fields": {
+    "title": "Rice Cooker (Small)",
+    "description": "Clean, perfect for dorm cooking.",
+    "price": "18.00",
+    "status": "AVAILABLE",
+    "category": 4,
+    "created_at": "2026-03-12T14:01:47.632Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 13,
+  "fields": {
+    "title": "Electric Kettle",
+    "description": "Fast boil, used lightly.",
+    "price": "10.00",
+    "status": "AVAILABLE",
+    "category": 4,
+    "created_at": "2026-03-12T14:02:34.080Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 14,
+  "fields": {
+    "title": "Frying Pan (Non-stick)",
+    "description": "Still non-stick, normal wear.",
+    "price": "7.00",
+    "status": "AVAILABLE",
+    "category": 4,
+    "created_at": "2026-03-12T14:02:55.929Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 15,
+  "fields": {
+    "title": "Cutlery Set (Fork/Spoon/Knife)",
+    "description": "Student starter set.",
+    "price": "4.00",
+    "status": "AVAILABLE",
+    "category": 4,
+    "created_at": "2026-03-12T14:03:16.299Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 16,
+  "fields": {
+    "title": "Office Chair",
+    "description": "Comfortable, height adjustable.",
+    "price": "25.00",
+    "status": "AVAILABLE",
+    "category": 3,
+    "created_at": "2026-03-12T14:03:37.684Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 17,
+  "fields": {
+    "title": "Small Bookshelf",
+    "description": "Fits beside desk, easy to move.",
+    "price": "15.00",
+    "status": "AVAILABLE",
+    "category": 3,
+    "created_at": "2026-03-12T14:03:59.893Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 18,
+  "fields": {
+    "title": "Laundry Drying Rack",
+    "description": "Foldable, good for flats.",
+    "price": "8.00",
+    "status": "AVAILABLE",
+    "category": 3,
+    "created_at": "2026-03-12T14:04:20.512Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 19,
+  "fields": {
+    "title": "Winter Coat (Size M)",
+    "description": "Warm, good for Glasgow weather.",
+    "price": "20.00",
+    "status": "AVAILABLE",
+    "category": 6,
+    "created_at": "2026-03-12T14:04:40.409Z",
+    "image_url": ""
+  }
+},
+{
+  "model": "market.listing",
+  "pk": 20,
+  "fields": {
+    "title": "Backpack (Laptop 15-inch)",
+    "description": "Multiple pockets, zipper ok.",
+    "price": "12.00",
+    "status": "AVAILABLE",
+    "category": 6,
+    "created_at": "2026-03-12T14:04:54.293Z",
+    "image_url": ""
+  }
+}
+]
