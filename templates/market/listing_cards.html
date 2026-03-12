@@ -8,7 +8,7 @@
             <div class="text-muted small mb-2">
               £{{ item.price }} · {{ item.category.name }} · {{ item.status }}
             </div>
-            <a class="btn btn-sm btn-outline-primary" href="#">View details</a>
+            <a class="btn btn-sm btn-outline-primary" href="{% url 'listing_detail' item.id %}">View details</a>
           </div>
         </div>
       </div>

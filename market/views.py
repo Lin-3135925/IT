@@ -1,30 +1,43 @@
 from django.shortcuts import render
+from .models import Category, Listing
 
-# Browse page (temporary minimal version)
 def browse(request):
+    category = request.GET.get("category", "")
+    q = request.GET.get("q", "")
+
+    listings = Listing.objects.select_related("category").all().order_by("-created_at")
+    categories = Category.objects.all().order_by("name")
+
+    if category:
+        listings = listings.filter(category_id=category)
+
+    if q:
+        listings = listings.filter(title__icontains=q)
+
     context = {
-        "categories": [],
-        "selected_category": request.GET.get("category", ""),
-        "q": request.GET.get("q", ""),
-        "listings": [],
+        "categories": categories,
+        "selected_category": category,
+        "q": q,
+        "listings": listings,
     }
     return render(request, "market/browse.html", context)
 
-# AJAX partial for listings
 def browse_partial(request):
-    category = request.GET.get("category")
-    q = request.GET.get("q")
+    category = request.GET.get("category", "")
+    q = request.GET.get("q", "")
 
-    listings = []
+    listings = Listing.objects.select_related("category").all().order_by("-created_at")
 
     if category:
-        pass
+        listings = listings.filter(category_id=category)
 
     if q:
-        pass
+        listings = listings.filter(title__icontains=q)
 
-    return render(
-        request,
-        "market/listing_cards.html",
-        {"listings": listings}
-    )
+    return render(request, "market/listing_cards.html", {"listings": listings})
+
+from django.shortcuts import get_object_or_404
+
+def listing_detail(request, listing_id: int):
+    listing = get_object_or_404(Listing.objects.select_related("category"), pk=listing_id)
+    return render(request, "market/detail.html", {"listing": listing})
