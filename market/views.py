@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from .models import Category, Listing
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
+from .forms import ListingForm
 
 def browse(request):
     category = request.GET.get("category", "")
@@ -41,3 +44,15 @@ from django.shortcuts import get_object_or_404
 def listing_detail(request, listing_id: int):
     listing = get_object_or_404(Listing.objects.select_related("category"), pk=listing_id)
     return render(request, "market/detail.html", {"listing": listing})
+
+@login_required
+def listing_create(request):
+    if request.method == "POST":
+        form = ListingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("browse")
+    else:
+        form = ListingForm()
+
+    return render(request, "market/create.html", {"form": form})

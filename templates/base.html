@@ -30,12 +30,11 @@
 
         <div class="d-flex gap-2">
           {% if user.is_authenticated %}
-            <!-- Add these when the URL names exist -->
-            {# <a class="btn btn-outline-secondary btn-sm" href="{% url 'my_listings' %}">My listings</a> #}
-            {# <a class="btn btn-outline-secondary btn-sm" href="{% url 'favourites' %}">Favourites</a> #}
-            {# <a class="btn btn-outline-danger btn-sm" href="{% url 'logout' %}">Logout</a> #}
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'listing_create' %}">Add listing</a>
+            <a class="btn btn-outline-danger btn-sm" href="{% url 'logout' %}">Logout</a>
           {% else %}
-            {# <a class="btn btn-primary btn-sm" href="{% url 'login' %}">Login</a> #}
+            <a class="btn btn-primary btn-sm" href="{% url 'login' %}">Login</a>
+            <a class="btn btn-outline-secondary btn-sm" href="{% url 'signup' %}">Sign up</a>
           {% endif %}
         </div>
       </div>
